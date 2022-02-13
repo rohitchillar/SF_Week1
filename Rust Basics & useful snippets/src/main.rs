@@ -1,3 +1,7 @@
+extern crate rand;
+use rand::{thread_rng, Rng};
+
+
 fn main() {
     //Variables are immutable
     //Static type - once a type is declared or inferred it cant be changed
@@ -54,4 +58,59 @@ fn main() {
         _=>println!("Value of x is invalid")
     }
 
+    let key:&str="abaa";
+    let s:&str="bbbb";
+    let c= key.chars().nth(2).unwrap();
+    for byte in key.bytes() {
+
+        println!("{}",byte);
+        // ...
+    }
+    println!("{}",c);
+
+    let speed:u8=5;
+    let mut f:f64 = speed.into();
+
+    f=f*(2 as f64);
+    println!("convert {}",f)
+
+
+}
+
+///simple cypher problem on exercism
+
+use std::ops::Range;
+static RANGE: Range<u8> = b'a'..(b'z' + 1);
+
+pub fn add(c: char,k: char) -> char{
+    (b'a' + u8::wrapping_add(26 + c as u8 - b'a', k as u8 - b'a') % 26) as char       
+}
+
+pub fn sub(c: char,k: char) -> char{
+    (b'a' + u8::wrapping_sub(26 + c as u8 - b'a', k as u8 - b'a') % 26) as char       
+}
+
+pub fn encode(key: &str, s: &str) -> Option<String> {
+    if key.is_empty() || !key.chars().all(|c| c.is_ascii_lowercase()) {
+            return None;
+    }
+    Some(s.chars()
+        .zip(key.chars().cycle())
+        .map(|(c, k)| add(c,k)).collect(),)
+}
+
+pub fn decode(key: &str, s: &str) -> Option<String> {
+    if key.is_empty() || !key.chars().all(|c| c.is_ascii_lowercase()) {
+            return None;
+    }
+    Some(s.chars()
+        .zip(key.chars().cycle())
+        .map(|(c, k)| sub(c,k)).collect(),)
+}
+
+pub fn encode_random(s: &str) -> (String, String) {
+    let mut rng = thread_rng();
+    let key: String = (0..100).map(|_| (rng.gen_range(RANGE.start, RANGE.end)) as char).collect();
+    let encoded_string = encode(&key, s);
+    (key, encoded_string.unwrap())
 }

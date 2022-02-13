@@ -1,0 +1,30 @@
+On devnet
+---
+Creating token Dpnsmp3wLZioKchgsk6mUFQ5NVtMEcfDyBrkDN3BkdMW
+
+Signature: 56GYSALYTnhbsU8Byc9b6et3eWEx4gbWzddzkdYW9uz7XKUkdkixZXBoJPszCuzUSJAvztkmv2hR4eznCJotUZxq
+---
+Token account - Dpnsmp3wLZioKchgsk6mUFQ5NVtMEcfDyBrkDN3BkdMW
+
+
+Signature: eMFnCJUpAmeMrNbH1PBhsTjEyhZQM7em41F8VwKKN2fZK6AdPEJoiX1KzCUAb32i1bvnN3iayTKTDWUxGKedhc7
+---
+Minting 100 tokens
+  Token: Dpnsmp3wLZioKchgsk6mUFQ5NVtMEcfDyBrkDN3BkdMW
+  Recipient: 4A2qWRL4W9Vuysq56Fv9N7S3wFsJYmK8RFWE2EtG1Nsh
+
+Signature: LEo5Db6y5nruXockvriAzoepmojb5jiKfpepCCgNEDwsYXt38im7Vj8xVFTGXsEMBnLcsTsY85NoxN56rTDDX1m
+---
+Updating Dpnsmp3wLZioKchgsk6mUFQ5NVtMEcfDyBrkDN3BkdMW
+  Current mint authority: HxzonnmGj5Y4FucguZE1kXz4KfRwLTtAAZo8yRTboPeQ
+  New mint authority: disabled
+
+Signature: 3gY93Yd2UArkt6vSZ4uYDSC4KppwTBEtxYiZ3a6JyQDKNpB1zzZSjDsXUAWVg2c6JKB6CNwzhBGkqswebdVeoa2o
+---
+Burn 1 tokens
+  Source: 4A2qWRL4W9Vuysq56Fv9N7S3wFsJYmK8RFWE2EtG1Nsh
+
+Signature: 4CQeCS3F6G4M147moUznydhHucEqvagcPHxtSyvpNJdN4fH8xGCrpTZSkEsh5V36xrzEbDYdr2pUEkQAahvs47z7
+---
+
+
